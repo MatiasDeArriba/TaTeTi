@@ -2,24 +2,88 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ta Te Ti</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Ta-Te-Ti | Matías De Arriba</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Ta Te Ti</h1>
-    <div id="gameBoard" class="board">
-      <div class="cell" data-cell></div>
-      <div class="cell" data-cell></div>
-      <div class="cell" data-cell></div>
-      <div class="cell" data-cell></div>
-      <div class="cell" data-cell></div>
-      <div class="cell" data-cell></div>
-      <div class="cell" data-cell></div>
-      <div class="cell" data-cell></div>
-      <div class="cell" data-cell></div>
-    </div>
-    <button id="restartButton" class="hidden">Reiniciar</button>
-    <script src="script.js"></script>
+    <!-- Contenedor principal de la app -->
+    <main class="app">
+      <header class="app-header">
+        <h1>Ta-Te-Ti</h1>
+        <p class="subtitle">
+          Juego clásico desarrollado con <strong>HTML, CSS y JavaScript</strong>.
+        </p>
+      </header>
+
+      <!-- Marcador de puntajes -->
+      <section class="scoreboard" aria-label="Marcador de la partida">
+        <div class="score">
+          <span class="score-label">Jugador X</span>
+          <span id="score-x" class="score-value">0</span>
+        </div>
+        <div class="score">
+          <span class="score-label">Empates</span>
+          <span id="score-draw" class="score-value">0</span>
+        </div>
+        <div class="score">
+          <span class="score-label">Jugador O</span>
+          <span id="score-o" class="score-value">0</span>
+        </div>
+      </section>
+
+      <!-- Tablero del Ta-Te-Ti -->
+      <section
+        class="board"
+        aria-label="Tablero de Ta-Te-Ti"
+        role="grid"
+      >
+        <!--
+          Cada celda es un botón para mejorar la accesibilidad.
+          data-cell-index nos permite identificar la posición en el array.
+        -->
+        <button class="cell" data-cell-index="0" role="gridcell" aria-label="Celda 1"></button>
+        <button class="cell" data-cell-index="1" role="gridcell" aria-label="Celda 2"></button>
+        <button class="cell" data-cell-index="2" role="gridcell" aria-label="Celda 3"></button>
+        <button class="cell" data-cell-index="3" role="gridcell" aria-label="Celda 4"></button>
+        <button class="cell" data-cell-index="4" role="gridcell" aria-label="Celda 5"></button>
+        <button class="cell" data-cell-index="5" role="gridcell" aria-label="Celda 6"></button>
+        <button class="cell" data-cell-index="6" role="gridcell" aria-label="Celda 7"></button>
+        <button class="cell" data-cell-index="7" role="gridcell" aria-label="Celda 8"></button>
+        <button class="cell" data-cell-index="8" role="gridcell" aria-label="Celda 9"></button>
+      </section>
+
+      <!-- Estado del juego -->
+      <p
+        id="game-status"
+        class="status"
+        aria-live="polite"
+      >
+        Turno de <span class="player-label">X</span>
+      </p>
+
+      <!-- Botones de acciones -->
+      <section class="actions">
+        <button id="reset-round" class="btn">
+          Reiniciar ronda
+        </button>
+        <button id="reset-game" class="btn btn-secondary">
+          Reiniciar todo
+        </button>
+      </section>
+
+      <footer class="app-footer">
+        <p>
+          Desarrollado por <strong>Matías De Arriba</strong> ·
+          Proyecto de práctica para <strong>QA &amp; Desarrollo Web</strong>.
+        </p>
+      </footer>
+    </main>
+
+    <!-- Script principal del juego -->
+    <script src="script.js" defer></script>
   </body>
 </html>
