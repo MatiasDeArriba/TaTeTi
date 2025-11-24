@@ -1,34 +1,46 @@
 # 🎮 Ta-Te-Ti (Tic Tac Toe)
 
-Proyecto web del clásico **Ta-Te-Ti**, desarrollado con **HTML, CSS y JavaScript puro**.  
-Pensado como práctica de **lógica de programación**, **maquetado moderno** y **enfoque QA**.
+Proyecto web del clásico **Ta-Te-Ti**, desarrollado con **HTML, CSS y JavaScript puro**, con una interfaz moderna y efectos visuales de alto nivel.  
+Diseñado tanto para **portfolio frontend**, como para práctica de **QA** y lógica de programación.
+
+---
+
+## 📸 Capturas de pantalla
+
+### 🧩 Tablero inicial
+![Ta-Te-Ti - Tablero Inicial](./assets/screenshot-inicial.png)
+
+### 🏆 Ejemplo de partida ganada
+![Ta-Te-Ti - Partida Ganada](./assets/screenshot-ganada.png)
+
+
 
 ---
 
 ## ✨ Características principales
 
-- ✅ Interfaz moderna tipo **card** con efecto glass/neo brutalism.
-- ✅ Tablero de 3x3 totalmente interactivo.
-- ✅ Marcador persistente:
-  - Victorias de **Jugador X**
-  - Victorias de **Jugador O**
+- UI moderna con sombras, gradientes y efectos neon.
+- Tablero de 3x3 completamente interactivo.
+- Marcador que registra:
+  - Ganadas de **X**
+  - Ganadas de **O**
   - **Empates**
-- ✅ Controles:
-  - **Reiniciar ronda** (mantiene el marcador).
-  - **Reiniciar todo** (resetea tablero + marcador).
-- ✅ Diseño **responsive**, centrado en pantallas desktop y adaptable a resoluciones menores.
-- ✅ Enfoque en **accesibilidad**:
-  - Celdas del tablero como `<button>`.
-  - `aria-label` por celda.
-  - Texto de estado con `aria-live="polite"`.
+- Botones:
+  - **Reiniciar ronda**
+  - **Reiniciar juego completo**
+- Enfoque en accesibilidad:
+  - Celdas = `<button>`
+  - `aria-label` accesibles
+  - Texto dinámico con `aria-live`
+- 100% responsive.
 
 ---
 
 ## 🧱 Tecnologías utilizadas
 
-- **HTML5** – estructura semántica del juego.
-- **CSS3** – layout, temática oscura, efectos visuales y diseño responsivo.
-- **JavaScript Vanilla** – lógica del juego, manejo de estado y DOM.
+- **HTML5**
+- **CSS3** (tema oscuro, efectos neon, responsivo)
+- **JavaScript Vanilla**
 
 ---
 
@@ -36,6 +48,9 @@ Pensado como práctica de **lógica de programación**, **maquetado moderno** y 
 
 ```bash
 TaTeTi/
-├── index.html      # Estructura principal del juego
-├── styles.css      # Estilos y diseño de la interfaz
-└── script.js       # Lógica del Ta-Te-Ti (JS puro)
+├── index.html
+├── styles.css
+├── script.js
+└── assets/
+    ├── screenshot-inicial.png
+    └── screenshot-ganada.png
